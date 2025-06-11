@@ -110,7 +110,7 @@ let tasks = [];
         currentMode = mode;
         resetTimer();
         if (mode === 'pomodoro'){
-            messageDisplay.textContext = 'LOCK IN!!!';
+            messageDisplay.textContent = 'LOCK IN!!!';
             timeDisplay.style.color = '#4CAF50'
         }
         else if (mode === 'short-break') {
