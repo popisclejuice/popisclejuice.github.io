@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Simple Pomodoro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Main timer section -->
+        <div class="timer-section">
+            <h1>My Pomodoro Timer!</h1>
+            <div id="time-display" class="time-display">25:00</div>
+            <div class="controls">
+                <button id="start-btn">Start</button>
+                <button id="pause-btn">Pause</button>
+                <button id="reset-btn">Reset</button>
+                <button id="short-break-btn">Short Break</button>
+                <button id="long-break-btn">Long Break</button>
+            </div>
+            <p id="message" class="message">Time to focus!</p>
+        </div>
+
+        <!-- Task management section -->
+        <div class="task-section">
+            <h2>My Tasks</h2>
+            <div class="task-input-area">
+                <input type="text" id="new-task-input" placeholder="What needs to get done?">
+                <button id="add-task-btn">Add Task</button>
+            </div>
+            <ul id="task-list" class="task-list">
+                
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

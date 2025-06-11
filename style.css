@@ -1,0 +1,197 @@
+body {
+    font-family: 'Arial', sans-serif; 
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start;
+    min-height: 100vh; 
+    background-color: #f0f2f5; 
+    margin: 0;
+    padding: 20px; 
+    box-sizing: border-box; 
+    flex-wrap: wrap; 
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 30px;
+    justify-content: center;
+    max-width: 900px; 
+    width: 100%; 
+}
+
+/* main sections (timer and tasks) */
+.timer-section, .task-section {
+    background-color: #ffffff; 
+    padding: 25px;
+    border-radius: 12px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+    flex: 1; 
+    min-width: 300px; 
+}
+
+h1, h2 {
+    color: #333; 
+    margin-bottom: 20px;
+}
+
+/* Timer display styling */
+.time-display {
+    font-size: 80px; 
+    font-weight: bold;
+    color: #4CAF50; 
+    margin-bottom: 30px;
+    letter-spacing: 2px; 
+}
+
+/* Buttons styling */
+.controls button, #add-task-btn {
+    background-color: #6a1b9a; 
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    margin: 5px;
+    border-radius: 8px; 
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.1s ease; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+.controls button:hover, #add-task-btn:hover {
+    background-color: #4a148c; 
+    transform: translateY(-2px); 
+}
+
+/* Specific button colors */
+#pause-btn { background-color: #FFC107; /* pause */ }
+#pause-btn:hover { background-color: #e0a800; }
+
+#reset-btn { background-color: #DC3545; /* reset */ }
+#reset-btn:hover { background-color: #c82333; }
+
+#short-break-btn { background-color: #2196F3; /* short break */ }
+#short-break-btn:hover { background-color: #1976D2; }
+
+#long-break-btn { background-color: #9C27B0; /* long break */ }
+#long-break-btn:hover { background-color: #7b1fa2; }
+
+/* Message area styling */
+.message {
+    font-size: 18px;
+    color: #555;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+/* Task input area */
+.task-input-area {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 10px; 
+}
+
+#new-task-input {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box; 
+}
+
+/* Task list styling */
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-list li {
+    background-color: #f9f9f9; 
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    border: 1px solid #eee;
+    font-size: 17px;
+    color: #444;
+}
+
+.task-list li:last-child {
+    margin-bottom: 0;
+}
+
+.task-list li input [type="checkbox"] {
+    margin-right: 15px;
+    min-width: 20px;
+    min-height: 20px;
+    cursor: pointer;
+    accent-color: #4CAF50;
+}
+
+.task-list li span{
+    flex-grow: 1; 
+    text-align: left;
+    word-break: break-word;
+}
+
+/* Finished Tasks */
+.task-list li.completed span {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.task-list li button {
+    background-color:#DC3545;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+    margin-left: 15px;
+}
+.task-list li button:hover {
+    background-color: #c82333;
+}
+
+/* some responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; 
+        padding: 15px; 
+    }
+
+    .timer-section, .task-section {
+        width: 100%; 
+        max-width: 600px; 
+    }
+
+    .time-display {
+        font-size: 60px; 
+    }
+
+    .controls button {
+        padding: 10px 18px; 
+        font-size: 14px;
+    }
+
+    .task-input-area {
+        flex-direction: column; 
+        gap: 10px;
+    }
+
+    #new-task-input {
+        width: 100%;
+        margin-right: 0; 
+    }
+
+    #add-task-btn {
+        width: 100%; 
+    }
+}
