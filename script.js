@@ -65,7 +65,6 @@ let tasks = [];
     }
 
     isPaused = false;
-    timeDisplay.style.color = '#4CAF50'
 
     // intervals
     countdown = setInterval(() => {
@@ -111,15 +110,15 @@ let tasks = [];
         resetTimer();
         if (mode === 'pomodoro'){
             messageDisplay.textContent = 'LOCK IN!!!';
-            timeDisplay.style.color = '#4CAF50'
+            timeDisplay.style.color = '#8e7bbf'
         }
         else if (mode === 'short-break') {
             messageDisplay.textContent = 'Enjoy your break....';
-            timeDisplay.style.color = '#FFC107';
+            timeDisplay.style.color = '#ffc0cb';
         }
         else if(mode === 'long-break') {
             messageDisplay.textContent = 'Time for a long break!';
-            timeDisplay.style.color = "#2196F3";
+            timeDisplay.style.color = "#a7d9ff";
         }
      }
 
@@ -212,6 +211,9 @@ taskList.addEventListener('click', handleTaskClick);
 
 // initial setup
 window.onload = function() {
+    if (currentMode === 'pomdoro') {
+        timeDisplay.style.color = '#8e7bbf';
+    }
     updateDisplay(); 
     loadTasks(); 
 };
