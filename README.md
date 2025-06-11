@@ -1,2 +1,0 @@
-# popisclejuice.github.io
-Pomodorooooooo
