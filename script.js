@@ -60,17 +60,16 @@ let tasks = [];
 
    //Starts the countdown
    function startTimer() {
-    if(!isPaused) {
+    if (!isPaused) {
         return;
     }
 
     isPaused = false;
-    messageDisplay.textContent = 'LOCK IN!!!!';
     timeDisplay.style.color = '#4CAF50'
-    
+
     // intervals
     countdown = setInterval(() => {
-        if (timeLeft <=0){
+        if (timeLeft <= 0) {
             clearInterval(countdown);
             isPaused = true;
             messageDisplay.textContent = 'Time\'s up! KABOOM!!!'
