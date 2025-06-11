@@ -5,7 +5,7 @@ const pauseBtn=document.getElementById('pause-btn');
 const resetBtn=document.getElementById('reset-btn');
 const shortBreakBtn=document.getElementById('short-break-btn');
 const longBreakBtn=document.getElementById('long-break-btn');
-const messageDisplay=document.getElementById('message-display');
+const messageDisplay=document.getElementById('message');
 
 const newTaskInput=document.getElementById('new-task-input');
 const addTaskBtn=document.getElementById('add-task-btn');
